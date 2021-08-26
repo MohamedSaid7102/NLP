@@ -1,40 +1,39 @@
-# Webpack Express Example App
+# Evaluate a news article with Natural Language Processing
 
-The goal of this repo is be an example of a basic but functional app built on Express and Webpack.
+## How to start?
 
-If you are just starting this process, start from branch 0-initial-setup. Otherwise, switch to the appropriate numbered branches of this repo as needed. The branches are:
-- [0-initial-setup](https://github.com/udacity/fend-webpack-content/tree/0-initial-setup)
-- [1-install-webpack](https://github.com/udacity/fend-webpack-content/tree/1-install-webpack)
-- [2-add-webpack-entry](https://github.com/udacity/fend-webpack-content/tree/2-add-webpack-entry)
-- [3-webpack-output-and-loaders](https://github.com/udacity/fend-webpack-content/tree/3-webpack-output-and-loaders)
-- [4-webpack-plugins](https://github.com/udacity/fend-webpack-content/tree/4-webpack-plugins)
-- [5-webpack-mode](https://github.com/udacity/fend-webpack-content/tree/5-webpack-mode)
-- [6-webpack-for-convenience](https://github.com/udacity/fend-webpack-content/tree/6-webpack-for-convenience)
+1. clone the project `git clone <projectlink>`
+2. `cd <to projct name>`
+3. `npm install`
 
-Each branch in this project is a step along the path to creating a fully functional webpack setup. In each branch, there will be a documentation file that lists out the steps taken in that branch (each step is also roughly a git commit if you look at the history) which you can use as a checklist when setting up your own projects. 
+---
 
-## What we will cover
+## To run in development mode
 
-We will cover:
+---
 
-- Webpack entry point
-- Webpack output and dist folder
-- Webpack Loaders
-- Webpack Plugins
-- Webpack Mode
-- Tools for convenient Webpack development
+### Start front-end serve:
 
-## Get Up and Running
+`$ npm run build-dev *_* OR *_* yarn build-dev`
 
-Fork this repo, then clone the branch of your choice from your forked repo down to your computer:
+### Start back-end serve:
 
-```
-git clone -- git@github.com:[your-user-name]/webpack-express.git --
-```
+`$ npm run start *_* OR *_* yarn start`
 
-`cd` into your new folder and run:
-- ```npm install```
-- ```npm start``` to start the app
-- this app runs on localhost:8080, but you can of course edit that in server.js
+## To run in production mode
 
-**Note:** Webpack needs to be at version 4 in order for this repo to work as expected. Webpack is automatically included at the correct version in the `package.json` provided here.
+---
+
+### Generate the dist files and then start server at port 8081
+
+`$ npm run build-prod or yarn build-prod`
+
+`$ npm run start or yarn start`
+
+---
+
+## For Testing
+
+The testing is done with Jest.
+
+`npm run test *_* OR *_* yarn test`

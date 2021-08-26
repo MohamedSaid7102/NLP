@@ -1,7 +1,9 @@
-import { checkForName } from './js/nameChecker'
-import { handleSubmit } from './js/formHandler'
+import './styles/general.scss';
+import './styles/main.scss';
+import { handleUserSubmit } from './js/formHandler';
 
-console.log(checkForName);
-
-alert("I EXIST")
-console.log("CHANGE!!");
+const Form = document.getElementById('form');
+Form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  return handleUserSubmit(document.getElementById('article-url').value);
+});

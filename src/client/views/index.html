@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <title>NLP</title>
+    <link
+      rel="icon"
+      href="https://image.flaticon.com/icons/png/512/822/822103.png"
+    />
+  </head>
 
-    <body>
+  <body>
+    <h1 class="main-heading">NLP</h1>
+    <main>
+      <div class="main-container">
+        <h2>Enter a URL of an article.</h2>
+        <section>
+          <form id="form">
+            <label for="article-url">Article URL</label>
+            <input
+              id="article-url"
+              type="text"
+              name="input"
+              placeholder="URL here"
+            />
+            <button type="submit" class="btn-submit">Submit</button>
+          </form>
+        </section>
 
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
-
-        <main>
-            <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
-            </section>
-
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
-
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-
-    </body>
+        <section>
+          <h2>Result</h2>
+          <div id="result"></div>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
