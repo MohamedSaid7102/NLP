@@ -7,3 +7,5 @@ Form.addEventListener('submit', (e) => {
   e.preventDefault();
   return handleUserSubmit(document.getElementById('article-url').value);
 });
+
+console.log(`Hello w`);

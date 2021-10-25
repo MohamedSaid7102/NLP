@@ -12,11 +12,11 @@ module.exports = {
     libraryTarget: 'var',
     library: 'Client',
   },
-  mode: 'production',
+  mode: 'development',
   module: {
     rules: [
       {
-        test: '/.js$/',
+        test: /.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
