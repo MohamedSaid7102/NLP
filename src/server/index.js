@@ -22,16 +22,18 @@ app.post('/add-url', async (req, res) => {
   try {
     await axios
       .post(
-        `http://api.meaningcloud.com/summarization-1.0?key=${process.env.API_KEY}&url=${url}&sentences=5`
+        `http://api.meaningcloud.com/sentiment-2.1?key=${process.env.API_KEY}&url=${url}&sentences=5&lang=en`,
+        { redirect: 'follow' }
       )
       .then((data) => {
-        return res.json({ data: data.data.summary });
+        console.log(`--------------------Start--------------------`);
+        console.log(
+          `URL requires: http://api.meaningcloud.com/sentiment-2.1?key=${process.env.API_KEY}&url=${url}&sentences=5&lang=en`
+        );
+        console.log(`data in server is: `, data);
+        console.log(`------------------End-------------------`);
+        return res.json({ data: data.data });
       });
-    console.log(
-      `URL requires: http://api.meaningcloud.com/summarization-1.0?key=${process.env.API_KEY}&url=${url}&sentences=5`
-    );
-    console.log(`Data is : `, data);
-    console.log(`data in server is: `, data);
   } catch (error) {
     res.status(500).json({ message: 'Error happend with the request' });
   }
@@ -39,7 +41,7 @@ app.post('/add-url', async (req, res) => {
 
 // designates what port the app will listen to for incoming requests
 app.listen(8083, function () {
-  console.log('Example app listening on port 8083!');
+  console.log('NLP app listening on port 8083!');
 });
 
 app.get('/test', function (req, res) {
